@@ -51,6 +51,7 @@ let arr= [
     }
   }
   ]
+
 let FoundData=[];
 for (let i=0; i<arr.length; i++){
 FoundData.push(arr[i]["dt"])
@@ -72,10 +73,45 @@ interface DescrData {
   dt: string;
   quantity: number;
   age: number;
-  temp:{
+  field: tempMap
+
+}
+ interface tempMap{
     temperature: string;
     city: string;
     optional?: boolean | null;
   }
+//const str: string = ""
+ const arrDescrDataFirst : tempMap [] = [
+      {
+    temperature: "50 degrees",
+      city: "Kursk",
+      optional: true
+      }
+    ]  
+const arrDescrData : DescrData [] = [
+      {
+          dt: "03-01-2021",
+    quantity: 700,
+    age: 27,
+    field: arrDescrDataFirst}]
+    
+    console.log(arrDescrData)
+    console.log(arrDescrDataFirst)
+ 
+/*interface DescrDataMap {/*интерфейс выходного map? какой был бы удобный*/
+  /*dt: string;
+  field:DescrDataMapItem;
+}*/
 
-}
+/*interface DescrDataMapItem{
+    quantity: number;
+    age: number;
+    temp:{
+    temperature: string;
+    city: string;
+    optional?: boolean | null;
+  }
+  
+}*/
+
