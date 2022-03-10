@@ -52,7 +52,7 @@ let arr= [
   }
   ]
 
-let FoundData=[];
+let FoundData=[];/*получить Сет уникальных дат на выходе*/
 for (let i=0; i<arr.length; i++){
 FoundData.push(arr[i]["dt"])
 }
@@ -60,7 +60,7 @@ let uniqData = new Set(FoundData)
 console.log(FoundData);
 console.log(uniqData)
 
-let dataMap = new Map();/*тут мне помогли(второй пункт), но я  вроде разобралась*/
+let dataMap = new Map();/*тут мне помогли(второй пункт), но я  вроде разобралась(мапа значений для даты, где ключ это дата, а значение это массив данных за это число)*/
 for (item of arr) {
     const temp = Object.assign({}, item);
     delete temp.dt; 
@@ -69,7 +69,7 @@ for (item of arr) {
 
 console.log(dataMap);
 
-interface DescrData {
+interface DescrData {/*попытки придумать что-то нормальное(Написать интерфейс данного запроса, используя обязательные и не обязательные поля, могут быть вложенные в интерфейсы  - интерфейсы)*/
   dt: string;
   quantity: number;
   age: number;
